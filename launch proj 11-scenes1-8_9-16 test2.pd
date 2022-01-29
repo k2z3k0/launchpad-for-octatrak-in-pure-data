@@ -184,7 +184,7 @@ output device #1 and output for okta is output device #2;
 #X text 4 -139 this is for NOTE;
 #X text 88 93 out to launch->;
 #X obj 237 -45 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 149 -17 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 #fcfcfc #000000 #000000 71 256;
 #X obj 148 -40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -944,7 +944,7 @@ need to set according to desired page 8 \, 7 \, 6 \, 5....;
 #X text 4 -139 this is for NOTE;
 #X text 88 93 out to launch->;
 #X obj 237 -45 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 149 -17 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 #fcfcfc #000000 #000000 101 256;
 #X obj 148 -40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -1118,7 +1118,7 @@ ON \, OFF;
 #X obj 217 352 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 109 191 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 0 256;
+#fcfcfc #000000 #000000 1 256;
 #X obj 108 152 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 15 27 ctlin 108 1;
@@ -1131,7 +1131,7 @@ ON \, OFF;
 #X obj 1140 483 route;
 #X text 311 514 turn off last selected->;
 #X obj 687 341 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 84 256;
+#fcfcfc #000000 #000000 100 256;
 #X msg 348 97 127;
 #X text 316 26 ->recall page selected before last boot;
 #X text 965 516 turn on selected color->;
@@ -1164,10 +1164,10 @@ ON \, OFF;
 #X obj 523 438 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 555 522 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 116 256;
+#fcfcfc #000000 #000000 84 256;
 #X obj 553 466 v crosss;
 #X obj 555 439 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 84 256;
+#fcfcfc #000000 #000000 100 256;
 #X obj 154 68 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X text 344 469 store the last pressed button;
@@ -1175,7 +1175,7 @@ ON \, OFF;
 #X obj 1099 50 inlet from right notein;
 #X obj 128 297 inlet to switch to next page;
 #X obj 749 407 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 84 256;
+#fcfcfc #000000 #000000 100 256;
 #X msg 486 513 85;
 #X msg 408 376 85;
 #X connect 0 0 33 0;
@@ -1284,7 +1284,7 @@ ON \, OFF;
 #X obj 523 438 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 555 522 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 4 256;
+#fcfcfc #000000 #000000 36 256;
 #X obj 555 439 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 #fcfcfc #000000 #000000 20 256;
 #X obj 71 69 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1483,8 +1483,8 @@ ON \, OFF;
 #X restore 29 195 pd crossfader;
 #X obj 29 137 loadbang;
 #X obj 31 249 loadbang;
-#N canvas 27 23 849 823 SCENE 0;
-#N canvas 615 107 825 739 scene 0;
+#N canvas 27 23 849 823 SCENE 1;
+#N canvas 77 81 825 739 scene 0;
 #X obj 549 45 ctlin;
 #X obj 387 229 change;
 #X obj 342 255 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -1495,13 +1495,13 @@ ON \, OFF;
 #X text 171 297 turn off last selected->;
 #X text 466 301 turn on selected->;
 #X obj 380 299 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 106 256;
+#fcfcfc #000000 #000000 107 256;
 #X obj 636 273 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 106 256;
+#fcfcfc #000000 #000000 107 256;
 #X obj 599 382 ctlout;
 #X msg 127 117 127;
 #X obj 195 470 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 3 256;
+#fcfcfc #000000 #000000 4 256;
 #X obj 90 163 delay 100 1 msec;
 #X text 252 470 ->remember last page selected;
 #X text 206 164 ->delay to switch to last page;
@@ -1573,7 +1573,7 @@ button #4 \, 3 you send selected scenes to current;
 #000000;
 #X obj 37 22 inlet from recall bang 2;
 #X obj 595 526 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 51 256;
+#fcfcfc #000000 #000000 35 256;
 #X obj 568 457 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 589 636 noteout 1;
@@ -1591,7 +1591,7 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 1005 1153 route;
 #X text 319 1265 turn off last selected->;
 #X obj 715 1153 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 66 256;
+10 #fcfcfc #000000 #000000 67 256;
 #X msg 267 837 127;
 #X msg 525 866 67;
 #X msg 560 866 83;
@@ -1610,7 +1610,7 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 171 736 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 610 1262 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 82 256;
+10 #fcfcfc #000000 #000000 83 256;
 #X obj 583 1193 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 604 1372 noteout 1;
@@ -1619,7 +1619,7 @@ button #4 \, 3 you send selected scenes to current;
 #X msg 923 842 0, f 2;
 #X msg 502 1266 16;
 #X obj 615 1195 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 66 256;
+10 #fcfcfc #000000 #000000 67 256;
 #X obj 222 1142 inlet to switch to next page;
 #X msg 361 1198 16;
 #X obj 613 1226 value vab;
@@ -1642,7 +1642,7 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 786 487 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 #fcfcfc #000000 #000000 19 256;
 #X obj 764 1231 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 66 256;
+10 #fcfcfc #000000 #000000 67 256;
 #X connect 0 1 13 0;
 #X connect 2 0 82 0;
 #X connect 2 0 15 0;
@@ -1776,7 +1776,7 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 990 417 route;
 #X text 311 529 turn off last selected->;
 #X obj 700 417 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 18 256;
+#fcfcfc #000000 #000000 34 256;
 #X msg 252 101 127;
 #X text 210 -6 ->recall page selected before last boot;
 #X msg 372 131 3;
@@ -1797,14 +1797,14 @@ button #4 \, 3 you send selected scenes to current;
 #000000;
 #X obj 36 -5 inlet from recall bang 2;
 #X obj 595 526 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 34 256;
+#fcfcfc #000000 #000000 35 256;
 #X obj 568 457 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 596 423 change;
 #X msg 908 106 0, f 2;
 #X msg 487 530 16;
 #X obj 600 459 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 18 256;
+#fcfcfc #000000 #000000 34 256;
 #X obj 598 490 value scenb;
 #X obj 1295 17 inlet notein left;
 #X obj 1294 70 inlet notein right;
@@ -1824,7 +1824,7 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 1009 1146 route;
 #X text 330 1258 turn off last selected->;
 #X obj 719 1146 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 98 256;
+10 #fcfcfc #000000 #000000 114 256;
 #X msg 271 830 127;
 #X msg 529 859 67;
 #X msg 564 859 83;
@@ -1843,14 +1843,14 @@ button #4 \, 3 you send selected scenes to current;
 #X obj 56 786 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 614 1255 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 82 256;
+10 #fcfcfc #000000 #000000 99 256;
 #X obj 587 1186 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 615 1152 change;
 #X msg 927 835 0, f 2;
 #X msg 506 1259 16;
 #X obj 619 1188 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 98 256;
+10 #fcfcfc #000000 #000000 114 256;
 #X obj 608 1365 noteout 1;
 #X obj 1023 1297 noteout 1;
 #X obj 246 1099 inlet to switch to next page;
@@ -1884,9 +1884,9 @@ button #4 \, 3 you send selected scenes to current;
 #X msg 1186 1395 6;
 #X msg 1218 1395 7;
 #X obj 750 489 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 18 256;
+#fcfcfc #000000 #000000 34 256;
 #X obj 786 1214 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 #fcfcfc #000000 #000000 98 256;
+10 #fcfcfc #000000 #000000 114 256;
 #X connect 0 1 13 0;
 #X connect 2 0 98 0;
 #X connect 2 0 15 0;
@@ -2121,6 +2121,7 @@ button #4 \, 3 you send selected scenes to current;
 #X msg 1232 350 98;
 #X msg 1314 346 114;
 #X obj 47 55 delay 10 1 msec;
+#X obj 90 218 delay 1000 1 msec;
 #X connect 0 0 8 0;
 #X connect 3 0 4 0;
 #X connect 3 0 6 0;
@@ -2155,6 +2156,7 @@ button #4 \, 3 you send selected scenes to current;
 #X connect 17 0 26 0;
 #X connect 17 0 52 0;
 #X connect 17 0 70 0;
+#X connect 17 0 71 0;
 #X connect 18 0 36 0;
 #X connect 18 0 28 0;
 #X connect 19 0 37 0;
@@ -2236,6 +2238,7 @@ button #4 \, 3 you send selected scenes to current;
 #X connect 68 0 53 0;
 #X connect 69 0 53 0;
 #X connect 70 0 0 0;
+#X connect 71 0 0 0;
 #X restore 33 339 pd SCENE SELECT;
 #X obj 646 67 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;

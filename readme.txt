@@ -10,7 +10,7 @@
 2*  -------PROGRAMS-------
 1*  --------1->16---------
 
--round buttons top REC
+-round buttons top row are IN rec
 AB,CD,SRC3 are to set inside of patch
 
 -round buttons:

@@ -18,5 +18,5 @@ AB,CD,SRC3 are to set inside of patch
 4,3:switch beetwen two scenes settings
 4:page 1->8,9->16
 3:page 9->16,1->8
-press again same page recall to current scenes
+press again same page to recall current scenes
 2,1:switch beetwen Bank 1 and Bank 2 

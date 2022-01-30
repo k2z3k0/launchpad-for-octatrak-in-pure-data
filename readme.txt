@@ -14,6 +14,10 @@
 AB,CD,SRC3 are to set inside of patch
 
 -round buttons left side:
+
+8:two pages of mute
+7:two pages of solo
+6:two pages of cue
 5:switch beetween two crossfader settings
 4,3:switch beetwen two scenes settings
 4:page 1->8,9->16

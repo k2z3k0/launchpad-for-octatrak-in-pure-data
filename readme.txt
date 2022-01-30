@@ -14,7 +14,6 @@
 AB,CD,SRC3 are to set inside of patch
 
 -round buttons left side:
-
 8:two pages of mute
 7:two pages of solo
 6:two pages of cue

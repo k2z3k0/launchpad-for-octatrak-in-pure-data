@@ -23,3 +23,6 @@ AB,CD,SRC3 are to set inside of patch
 3:page 9->16,1->8
 press again same page to recall current scenes
 2,1:switch beetwen Bank 1 and Bank 2 
+
+patch is auto saved every time you press button
+so on the next load you get same settings 

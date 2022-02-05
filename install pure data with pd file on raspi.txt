@@ -1,0 +1,62 @@
+rapsberry Pi install launchpad4okta 
+
+1.install RPi os on sd
+
+2.create empty file “ssh” on root of boot drive
+
+
+2a.Connect cat5 cable raspi->computer
+2b.insert SD to raspi
+2c.connect power to raspi
+
+3.Connect to Raspi ,run from terminal ssh pi@192.168.2.3(check raspi ip adress,pass:raspberry) 
+
+
+if you had ssh connection with raspi before,make sure you deleted previous “known_hosts” file from home/.ssh/*,otherwise it will refuse to conenct
+
+
+3a.resize raspi partition to max size 
+
+    sudo raspi-config -enter
+     6.Advance Options -enter
+     A1.Expand Filesystem -enter			
+reboot
+
+
+.reconnect to raspi step 3
+
+
+4.install pure data : sudo apt-get install puredata
+
+5.Copy pd file to raspi SD card,
+
+to mount usb drive ,make sure usb drive is the only usb device connected,otherwise it won’t be as sda1
+
+sudo mkdir /mnt/usb
+sudo chown -R pi:pi /mnt/usb
+sudo mount /dev/sda1 /mnt/usb -o uid=pi,gid=pi
+
+add if you wanna it each boot,add line:
+ 
+/dev/sda1 /mnt/usb auto defaults,user 0 1
+
+to:
+sudo nano /etc/fstab
+
+CAUTION!!!!!
+if u wanna use this, usb drive MUST be in usb port ,otherwise raspi will hang and wan’t finish boot!!!
+
+
+6.copy pd file to raspi sd
+sudo cp /mnt/usb/pdfile dest_file
+
+7.add to start pure data with patch,options without GUI each boot
+sudo nano /etc/rc.local
+
+and there paste this before EXIT 0 
+
+ sudo pd -noaudio -midiindev 1 -midioutdev 1 2 -nogui /home/l4o.pd &
+
+                                                                    midi  	  pd file location
+
+sudo reboot

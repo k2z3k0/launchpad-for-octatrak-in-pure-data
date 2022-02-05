@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red34\green79\blue188;\red31\green31\blue31;\red239\green239\blue239;
+\red31\green31\blue31;\red239\green239\blue239;\red38\green38\blue38;\red242\green242\blue242;}
+{\*\expandedcolortbl;;\csgenericrgb\c13206\c30848\c73913;\cssrgb\c16078\c16078\c16078;\cssrgb\c94902\c94902\c94902;
+\cssrgb\c16078\c16078\c16078;\cssrgb\c94902\c94902\c94902;\cssrgb\c20000\c20000\c20000;\cssrgb\c96078\c96078\c96078;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11300\viewh14440\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 rapsberry Pi install launchpad4okta \
+\
+1.install RPi os on sd\
+\
+2.create empty file \'93ssh\'94 on root of boot drive\
+\
+\
+2a.Connect cat5 cable raspi->computer\
+2b.insert SD to raspi\
+2c.connect power to raspi\
+\
+3.Connect to Raspi ,run from terminal(check raspi ip adress)pass:raspberry 
+\f1\fs18 \cf1 \cb2 \CocoaLigature0 ssh pi@192.168.2.3\
+
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 make sure you deleted previous \'93known_hosts\'94 file from home/.ssh/*\
+\
+3a.resize raspi partition to max size \
+\
+    sudo raspi-config -enter\
+     6.Advance Options -enter\
+     A1.Expand Filesystem -enter			\
+reboot\
+\
+\
+.reconnect to raspi step 3\
+\
+4.install pure data : sudo apt-get install puredata\
+\
+5.Copy pd file to raspi SD card,\
+\
+to mount usb drive ,make sure usb drive is the only usb device connected,otherwise it won\'92t be as sda1\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs32 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 sudo mkdir /mnt/usb\
+sudo chown -R pi:pi /mnt/usb\
+sudo mount /dev/sda1 /mnt/usb -o uid=pi,gid=pi\
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 add if you wanna it each boot,add line \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs32 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 /dev/sda1 /mnt/usb auto defaults,user 0 1\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 to  
+\f1\fs31\fsmilli15750 \cf5 \cb6 \expnd0\expndtw0\kerning0
+sudo nano /etc/fstab
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+CAUTION!!!!!\
+if u wanna use this, usb drive MUST be in usb port ,otherwise raspi will hang and wan\'92t finish boot!!!\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf0 \
+6.copy pd file to raspi sd\
+sudo cp /mnt/usb/pdfile dest_file\
+\
+7.add to start pure data with patch,options without GUI each boot\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f2\fs26 \cf7 \cb8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 sudo nano /etc/rc.local\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 and there paste this before EXIT 0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs18 \cf1 \cb2 \CocoaLigature0  sudo pd -noaudio -midiindev 1 -midioutdev 1 2 -nogui /home/l4o.pd &\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \CocoaLigature1                                                                     midi  	  pd file location\
+\
+sudo reboot}

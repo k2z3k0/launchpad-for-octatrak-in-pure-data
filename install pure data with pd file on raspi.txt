@@ -57,6 +57,6 @@ and there paste this before EXIT 0
 
  sudo pd -noaudio -midiindev 1 -midioutdev 1 2 -nogui /home/l4o.pd &
 
-                                                                    midi  	  pd file location
+                    ^midi in       ^midi out  	       ^pd file location
 
 sudo reboot

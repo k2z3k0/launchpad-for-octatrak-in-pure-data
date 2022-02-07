@@ -53,7 +53,7 @@ sudo cp /mnt/usb/pdfile dest_file
 7.add to start pure data with patch,options without GUI each boot
 sudo nano /etc/rc.local
 
-and there paste this before EXIT 0 
+and there paste this before EXIT 0 (you can check midi devices by amidi -l)
 
  sudo pd -noaudio -midiindev 1 -midioutdev 1 2 -nogui /home/l4o.pd &
 

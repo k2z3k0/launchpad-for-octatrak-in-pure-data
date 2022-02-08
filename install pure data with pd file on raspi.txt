@@ -55,7 +55,7 @@ sudo nano /etc/rc.local
 
 and there paste this before EXIT 0 (you can check midi devices by amidi -l)
 
- sudo pd -noaudio -midiindev 1 -midioutdev 1 2 -nogui /home/l4o.pd &
+ sudo pd -noaudio -midiindev 1 -midioutdev 1,2 -nogui /home/l4o.pd &
 
                     ^midi in       ^midi out  	       ^pd file location
 
